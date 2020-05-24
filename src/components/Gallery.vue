@@ -31,17 +31,17 @@ export default {
 <style>
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    grid-gap: 0.5rem;
     max-width: 80rem;
-    margin: 5rem auto;
-    padding: 0 5rem;
+    margin: 1rem auto;
+    padding: 0 5%;
   }
   .gallery-panel img {
     width: 100%;
-    height: 22vw;
+    height: 100%;
     object-fit: cover;
-    object-position: 0% 10%;
+    object-position: 0% 0%;
     border-radius: 0.75rem;
   }
 </style>

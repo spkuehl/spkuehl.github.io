@@ -1,11 +1,6 @@
 <template>
   <div class="lightbox" @click.self="closeLightbox">
     <img :src="photoUrl(photo.filename)">
-    <div class="lightbox-info">
-      <div class="lightbox-info-inner">
-        <p v-if="photo.title">{{ photo.title }}</p>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -46,8 +41,8 @@ export default {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: 10% 80% 10%;
+    grid-gap: 0px;
   }
 
   .lightbox img {
@@ -56,13 +51,4 @@ export default {
     grid-column-start: 2;
   }
 
-  .lightbox-info {
-    margin: auto 2rem auto 0;
-  }
-
-  .lightbox-info-inner {
-    background-color: #FFFFFF;
-    display: inline-block;
-    padding: 2rem;
-  }
 </style>
