@@ -1,7 +1,7 @@
 <template>
-<div class="container">
+<div class="container" id="gallery">
   <h3 class="text-center">Pictures of us</h3>
-  <div class="gallery" id="gallery">
+  <div class="gallery">
     <div class="gallery-panel"
          v-for="photo in photos"
          :key="photo.id">
@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     thumbUrl(filename) {
-      console.log(filename);
       return require(`../assets/eng_pics/${filename}`);
     },
   },
@@ -44,7 +43,7 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 0%;
+    object-position: 50% 0%;
     border-radius: 0.75rem;
   }
 </style>
