@@ -4,7 +4,7 @@
   <div class="gallery">
     <div class="gallery-panel"
          v-for="photo in photos"
-         :key="photo.id" v-bind:class="{'gallerycollapse':(photo.id > 7)}">
+         :key="photo.id" v-bind:class="{'gallerycollapse collapse':(photo.id > 7)}">
       <router-link :to="`/photo/${photo.id}`">
         <img :src="thumbUrl(photo.filename)">
       </router-link>
