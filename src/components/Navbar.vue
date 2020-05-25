@@ -11,10 +11,10 @@
           <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Photos</a>
+          <a class="nav-link" href="#gallery">Photos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Venue</a>
+          <a class="nav-link" href="#venue">Venue</a>
         </li>
       </ul>
     </div>

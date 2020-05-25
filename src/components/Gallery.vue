@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery">
+  <div class="gallery" id="gallery">
     <div class="gallery-panel"
          v-for="photo in photos"
          :key="photo.id">
