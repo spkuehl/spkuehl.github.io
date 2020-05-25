@@ -4,12 +4,23 @@
   <div class="gallery">
     <div class="gallery-panel"
          v-for="photo in photos"
-         :key="photo.id">
+         :key="photo.id" v-bind:class="{'gallerycollapse':(photo.id > 7)}">
       <router-link :to="`/photo/${photo.id}`">
         <img :src="thumbUrl(photo.filename)">
       </router-link>
     </div>
   </div>
+
+  <div class="accordion text-center" id="accordionExample">
+        <h2 class="mb-0">
+        <button v-show="!accordionToggle" v-on:click="toggleCollapse" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target=".gallerycollapse" aria-expanded="false" aria-controls="collapseTwo">
+          See more pictures
+        </button>
+        <button v-show="accordionToggle" v-on:click="toggleCollapse" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target=".gallerycollapse" aria-expanded="false" aria-controls="collapseTwo" href="#gallery">
+          <a href="#gallery">See less pictures</a>
+        </button>
+        </h2>
+      </div>
 </div>
 </template>
 
@@ -20,11 +31,15 @@ export default {
   data() {
     return {
       photos,
+      accordionToggle: false,
     };
   },
   methods: {
     thumbUrl(filename) {
       return require(`../assets/eng_pics/${filename}`);
+    },
+    toggleCollapse() {
+      this.accordionToggle = !this.accordionToggle;
     },
   },
 };

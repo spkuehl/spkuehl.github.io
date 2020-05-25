@@ -11,7 +11,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-4">Lauren & Sean</h1>
-        <p class="lead">We've changed the date!</p>
+        <p class="lead">We've changed the date to July 31st, 2021!</p>
       </div>
     </div>
   </div>
