@@ -1,4 +1,6 @@
 <template>
+<div class="container">
+  <h3 class="text-center">Pictures of us</h3>
   <div class="gallery" id="gallery">
     <div class="gallery-panel"
          v-for="photo in photos"
@@ -8,6 +10,7 @@
       </router-link>
     </div>
   </div>
+</div>
 </template>
 
 <script>
